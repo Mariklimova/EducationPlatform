@@ -1,5 +1,5 @@
 const express = require('express');
-const {createData} = require('../service/user.service')
+const {createData,getAllUser,getAllUserById,updateUser,deleteUser,partUpdateUser} = require('../service/user.service')
 const route = express.Router();
 
 route.post('/', async (req, res) => {
