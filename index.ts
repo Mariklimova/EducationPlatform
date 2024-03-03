@@ -1,6 +1,5 @@
-
 import { app } from './src/app';
 
-app.listen (3001,()=>{
-    console.log('server run');
-})
+app.listen(3005, () => {
+  console.log('server run');
+});
