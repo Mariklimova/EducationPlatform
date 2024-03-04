@@ -23,7 +23,7 @@ async function getAllUserDB(): Promise<iUser[]> {
   return rows;
 }
 
-async function getAllUserByIdDB(id: number): Promise<iUser[]> {
+async function getAllUserByIdDB(id: string): Promise<iUser[]> {
   const client = await pool.connect();
 
   const sql: string = 'select * from users where id = $1';
@@ -31,7 +31,7 @@ async function getAllUserByIdDB(id: number): Promise<iUser[]> {
   return rows;
 }
 
-async function updateUserDB(id: number, name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
+async function updateUserDB(id: string, name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -45,7 +45,7 @@ async function updateUserDB(id: number, name: string, surname: string, email: st
   }
 }
 
-async function deleteUserDB(id: number): Promise<iUser[]> {
+async function deleteUserDB(id: string): Promise<iUser[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -59,7 +59,7 @@ async function deleteUserDB(id: number): Promise<iUser[]> {
   }
 }
 
-async function partUpdateUserDB(id: number, body: iUser): Promise<iUser[]> {
+async function partUpdateUserDB(id: string, body: iUser): Promise<iUser[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');

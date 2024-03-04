@@ -23,7 +23,7 @@ async function getAllCourseDB(): Promise<iCourse[]> {
   return rows;
 }
 
-async function getCourseByIdDB(id: number): Promise<iCourse[]> {
+async function getCourseByIdDB(id: string): Promise<iCourse[]> {
   const client = await pool.connect();
 
   const sql: string = 'select * from courses where id = $1';
@@ -31,7 +31,7 @@ async function getCourseByIdDB(id: number): Promise<iCourse[]> {
   return rows;
 }
 
-async function deleteCourseDB(id: number): Promise<iCourse[]> {
+async function deleteCourseDB(id: string): Promise<iCourse[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -45,7 +45,7 @@ async function deleteCourseDB(id: number): Promise<iCourse[]> {
   }
 }
 
-async function updateCourseDB(id: number, course: string, description: string): Promise<iCourse[]> {
+async function updateCourseDB(id: string, course: string, description: string): Promise<iCourse[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -59,7 +59,7 @@ async function updateCourseDB(id: number, course: string, description: string): 
   }
 }
 
-async function partUpdateCourseDB(id: number, body: iCourse): Promise<iCourse[]> {
+async function partUpdateCourseDB(id: string, body: iCourse): Promise<iCourse[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
