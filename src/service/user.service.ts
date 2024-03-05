@@ -1,4 +1,3 @@
-import bcrypt from 'bcrypt'
 import { iUser } from '../interfaces/interface';
 import { createDataDB, getAllUserDB, getAllUserByIdDB, updateUserDB, deleteUserDB, partUpdateUserDB } from '../repository/user.repository';
 

@@ -1,10 +1,12 @@
-// function IsValidId(req, _res, next) {
-//   const { id } = req.params;
+import { Response, Request, NextFunction } from 'express';
 
-//   if (isNaN(id)) throw new Error('id not number');
-//   if (id <= 0) throw new Error(' id <= 0');
-//   next();
-// }
+function IsValidId(req: Request, _res: Response, next: NextFunction) {
+  const { id } = req.params;
+
+  if (isNaN(+id)) throw new Error('id not number');
+  if (+id <= 0) throw new Error(' id <= 0');
+  next();
+}
 
 // function IsValidUser(req, _res, next) {
 //   const { name, surname, email, pwd } = req.body;
@@ -17,4 +19,4 @@
 //   next();
 // }
 
-// export = { IsValidUser, IsValidId };
+export = { IsValidId };

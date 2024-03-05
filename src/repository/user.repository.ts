@@ -12,6 +12,8 @@ async function createDataDB(name: string, surname: string, email: string, pwd: s
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -42,6 +44,8 @@ async function updateUserDB(id: string, name: string, surname: string, email: st
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -56,6 +60,8 @@ async function deleteUserDB(id: string): Promise<iUser[]> {
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -73,6 +79,8 @@ async function partUpdateUserDB(id: string, body: iUser): Promise<iUser[]> {
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 

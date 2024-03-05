@@ -12,6 +12,8 @@ async function createCourseDB(course: string, description: string): Promise<iCou
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -42,6 +44,8 @@ async function deleteCourseDB(id: string): Promise<iCourse[]> {
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -56,6 +60,8 @@ async function updateCourseDB(id: string, course: string, description: string): 
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -73,6 +79,8 @@ async function partUpdateCourseDB(id: string, body: iCourse): Promise<iCourse[]>
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 

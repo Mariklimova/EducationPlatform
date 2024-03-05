@@ -1,7 +1,7 @@
 import pool from '../db';
 import { iUser } from '../interfaces/interface';
 
-async function createUserApiDB(name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
+async function createUserDB(name: string, surname: string, email: string, pwd: string): Promise<iUser[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -12,6 +12,8 @@ async function createUserApiDB(name: string, surname: string, email: string, pwd
   } catch (error: any) {
     await client.query('ROLLBACK');
     return [];
+  } finally {
+    client.release();
   }
 }
 
@@ -23,4 +25,4 @@ async function getUserByIdDB(email: string): Promise<iUser[]> {
   return rows;
 }
 
-export { createUserApiDB, getUserByIdDB };
+export { createUserDB, getUserByIdDB };
