@@ -6,7 +6,7 @@ import { createToken } from '../helper/jwt';
 
 const route = express.Router();
 
-route.post('/reg', async (req: Request, res: Response) => {
+route.post('/reg', async (req: Request, res: Response):Promise<void> => {
   try {
     const { name, surname, email, pwd } = req.body;
     const data: iUser[] = await createUser(name, surname, email, pwd);
@@ -16,7 +16,7 @@ route.post('/reg', async (req: Request, res: Response) => {
   }
 });
 
-route.post('/auth', async (req: Request, res: Response) => {
+route.post('/auth', async (req: Request, res: Response):Promise<void> => {
   try {
     const { email, pwd } = req.body;
     const data: iUser[] = await authorizUser(email, pwd);
