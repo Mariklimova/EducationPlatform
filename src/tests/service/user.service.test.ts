@@ -91,3 +91,48 @@ describe('updateUser', () => {
     });
 });
 
+describe('deleteUser', () => {
+    test('corrected', async () => {
+        const mock = jest.spyOn(repository, 'deleteUserDB');
+        mock.mockResolvedValue([{ id: 2, name: 'Peter', surname: 'Petrov', email: 'peter@mail.ru', pwd: '234567891' }]);
+        const result = await deleteUser('2');
+        expect(mock).toHaveBeenCalled();
+        expect(mock).toHaveBeenCalledWith('2');
+        expect(result).toEqual([{ id: 2, name: 'Peter', surname: 'Petrov', email: 'peter@mail.ru', pwd: '234567891' }]);
+        expect(result).toHaveLength(1);;
+    });
+
+    test('uncorrected', async () => {
+        const mock = jest.spyOn(repository, 'deleteUserDB');
+        mock.mockResolvedValue([]);
+        try {
+            await deleteUser('2')
+        } catch (error: any) {
+            expect(mock).toHaveBeenCalled();
+            expect(error.message).toBe('Id is not found, data was not deleted');
+        }
+    });
+});
+
+describe('partUpdateUser', () => {
+    test('corrected', async () => {
+        const mock = jest.spyOn(repository, 'partUpdateUserDB');
+        mock.mockResolvedValue([{ id: 1, name: 'Sidor', surname: 'Sidorov', email: 'sidor@mail.ru', pwd: '345678912' }]);
+        const result = await partUpdateUser('1',{email: 'sidor@mail.ru', pwd: '345678912' });
+        expect(mock).toHaveBeenCalled();
+        expect(mock).toHaveBeenCalledWith('1',{email: 'sidor@mail.ru', pwd: '345678912' });
+        expect(result).toEqual([{id: 1, name: 'Sidor', surname: 'Sidorov', email: 'sidor@mail.ru', pwd: '345678912' }]);
+        expect(result).toHaveLength(1);;
+    });
+
+    test('uncorrected', async () => {
+        const mock = jest.spyOn(repository, 'partUpdateUserDB');
+        mock.mockResolvedValue([]);
+        try {
+            await partUpdateUser('1',{email: 'sidor@mail.ru', pwd: '345678912' })
+        } catch (error: any) {
+            expect(mock).toHaveBeenCalled();
+            expect(error.message).toBe('Data is not changed');
+        }
+    });
+});
