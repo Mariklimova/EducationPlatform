@@ -76,21 +76,33 @@ describe('authorizUser', () => {
         expect(result).toEqual([{ id: 1, name: 'Ivan', surname: 'Ivanov', email: 'ivan@mail.ru', pwd: 'fdtfyguhijkl4vyujh' }]);
     });
 
-    // test('uncorrected_2', async () => {
-    //     const mock_1 = jest.spyOn(repository, 'getUserByIdDB');
-    //     const mock_2 = jest.spyOn(bcript, 'hash');
-    //     const mock_3 = jest.spyOn(repository, 'createUserDB');
-    //     try {
-    //         mock_1.mockResolvedValue([]);
-    //         mock_2.mockResolvedValue('fdtfyguhijkl4vyujh');
-    //         mock_3.mockResolvedValue([]);
+    test('uncorrected_1', async () => {
+        const mock = jest.spyOn(repository, 'getUserByIdDB');
 
-    //         await createUser('Ivan', 'Ivanov', 'ivan@mail.ru', '123456789')
-    //     } catch (error: any) {
-    //         expect(mock_1).toHaveBeenCalled();
-    //         expect(mock_2).toHaveBeenCalled();
-    //         expect(mock_3).toHaveBeenCalled();
-    //         expect(error.message).toBe('data is not saved')
-    //     }
-    // })
+        try {
+            mock.mockResolvedValue([]);
+            await authorizUser('ivan@mail.ru', 'fdtfyguhijkl4vyujh')
+        } catch (error: any) {
+            expect(mock).toHaveBeenCalled();
+            expect(error.message).toBe('wrong email')
+        }
+    });
+
+    test('uncorrected_2', async () => {
+        const mock_1 = jest.spyOn(repository, 'getUserByIdDB');
+        const mock_2 = jest.spyOn(bcript, 'compare');
+        
+        try {
+            mock_1.mockResolvedValue([{ id: 1, name: 'Ivan', surname: 'Ivanov', email: 'ivan@mail.ru', pwd: 'fdtfyguhijkl4vyujh' }]);
+            mock_2.mockResolvedValue(false);
+          
+
+            await authorizUser('ivan@mail.ru', 'fdtfyguhijkl4vyujh')
+        } catch (error: any) {
+            expect(mock_1).toHaveBeenCalled();
+            expect(mock_2).toHaveBeenCalled();
+    
+            expect(error.message).toBe('wrong password')
+        }
+    })
 })

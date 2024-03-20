@@ -16,10 +16,10 @@ async function createUser(name: string, surname: string, email: string, pwd: str
 
 async function authorizUser(email: string, pwd: string): Promise<iUser[]> {
   const checkEmail: iUser[] = await getUserByIdDB(email);
-  if (!checkEmail.length) throw new Error('wrong email or password');
+  if (!checkEmail.length) throw new Error('wrong email');
 
   const isValidPwd: boolean = await bcrypt.compare(pwd, checkEmail[0].pwd);
-  if (!isValidPwd) throw new Error('wrong email or password');
+  if (!isValidPwd) throw new Error('wrong password');
 
   return checkEmail;
 }
