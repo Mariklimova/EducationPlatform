@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header p {
+    color: #000000;
+    font: 700 16px Montserrat;
+}
+
+
+.login {
+    font: 700 16px Montserrat;
+    color: #000000;
+    height: 43px;
+    background-color: #FFFFFF;
+    border-width: 0;
+}
+
+.singUp {
+    width: 110px;
+    height: 43px;
+    padding: 13px 21px;
+    border-radius: 14.19px;
+    color: #FFFFFF;
+    background-color: #2B788B;
+    border-width: 0;
+    font: 700 16px Montserrat;
+}
