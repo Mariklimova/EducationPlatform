@@ -1,3 +1,8 @@
+.section_1 {
+    background-color: #F6F5F4;
+
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -14,8 +19,9 @@
     font: 700 16px Montserrat;
     color: #000000;
     height: 43px;
-    background-color: #FFFFFF;
+    background-color: #F6F5F4;
     border-width: 0;
+    margin-right: 25px;
 }
 
 .singUp {
@@ -27,4 +33,141 @@
     background-color: #2B788B;
     border-width: 0;
     font: 700 16px Montserrat;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1180px;
+    height: 700px;
+    margin-top: 130px;
+}
+
+.info {
+    width: 500px;
+    height: 397px;
+}
+
+.info h5 {
+    font: 700 16px Montserrat;
+    color: #2B788B;
+    margin-bottom: 24px;
+}
+
+.info h1 {
+    color: #000000;
+    font: 800 56px Montserrat;
+    letter-spacing: -0.04em;
+    margin-bottom: 30px;
+    margin-top: 24px;
+}
+
+.info p {
+    color: #757575;
+    font: 600 18px Montserrat;
+    width: 410px;
+}
+
+.info button {
+    width: 165px;
+    height: 44px;
+    padding: 14px 20px;
+    border-radius: 100px;
+    background: #C3DCE3;
+    color: #2B788B;
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;
+    margin-bottom: 49px;
+    margin-top: 32px;
+}
+
+.lightning {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+
+}
+
+.lightning p {
+    font: 800 40px Montserrat;
+    color: #000000;
+}
+
+.light_img {
+    background-image: url('./assets/Vector.svg');
+    width: 24px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.student_img {
+    background-image: url('./assets/Frame\ 25.svg');
+    width: 700px;
+    height: 545px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 140px;
+}
+
+.content_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 78px;
+}
+
+.learner_img {
+    background-image: url('./assets/image\ 8.svg');
+    width: 580px;
+    height: 445px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.info_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 510px;
+}
+
+.info_2 h1 {
+    color: #000000;
+    font: 800 48px Montserrat;
+    letter-spacing: -0.06em;
+    width: 400px;
+
+}
+
+.info_2 p {
+    color: #757575;
+    font: 600 18px Montserrat;
+    margin-top: 30px;
+}
+
+.img {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.sprint_img {
+    background-image: url('./assets/Group\ 11.svg');
+    width: 131px;
+    height: 145px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 21px;
+}
+
+.tasks_img {
+    background-image: url('./assets/Group\ 10.svg');
+    width: 172px;
+    height: 145px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
