@@ -1,4 +1,6 @@
-.section_1 {
+.section_1,
+.section_3,
+.footerColor {
     background-color: #F6F5F4;
 
 }
@@ -80,6 +82,7 @@
     letter-spacing: -0.04em;
     margin-bottom: 49px;
     margin-top: 32px;
+    border-width: 0;
 }
 
 .lightning {
@@ -94,12 +97,18 @@
     color: #000000;
 }
 
+.lightning p span {
+    font: 800 40px Montserrat;
+    color: #2B788B;
+}
+
 .light_img {
     background-image: url('./assets/Vector.svg');
     width: 24px;
     height: 30px;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-right: 10px;
 }
 
 .student_img {
@@ -170,4 +179,169 @@
     height: 145px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.content_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 26px;
+}
+
+.info_3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 475px;
+}
+
+.info_3 h1 {
+    color: #000000;
+    font: 800 48px Montserrat;
+    letter-spacing: -0.06em;
+    margin-bottom: 30px;
+
+}
+
+.info_3 p {
+    color: #757575;
+    font: 600 18px Montserrat;
+    margin-bottom: 34px;
+}
+
+.info_3 button {
+    width: 131px;
+    height: 44px;
+    padding: 14px 17px;
+    border-radius: 100px;
+    background: #C3DCE3;
+    color: #2B788B;
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;
+    border-width: 0;
+
+}
+
+.learner_img_3 {
+    background-image: url('./assets/image\ 2.svg');
+    width: 425px;
+    height: 474px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.content_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 95px;
+    margin-bottom: 95px;
+}
+
+.info_4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 400px;
+}
+
+.info_4 h1 {
+    color: #000000;
+    font: 800 48px Montserrat;
+    letter-spacing: -0.06em;
+    margin-bottom: 30px;
+
+}
+
+.info_4 p {
+    color: #757575;
+    font: 600 18px Montserrat;
+    margin-bottom: 34px;
+}
+
+.info_4 button {
+    width: 131px;
+    height: 44px;
+    padding: 14px 17px;
+    border-radius: 100px;
+    background: #C3DCE3;
+    color: #2B788B;
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;
+    border-width: 0;
+
+}
+
+.learner_img_4 {
+    background-image: url('./assets/image\ 3.svg');
+    width: 680px;
+    height: 409px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footerTop,
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerTop div {
+    display: flex;
+    gap: 30px;
+}
+
+.footerTop p {
+    color: #757575;
+    font: 600 14px Montserrat;
+    margin-top: 40px;
+}
+
+.line {
+    height: 1.2px;
+    background-color: #E0E0E0;
+    margin: 20px 0px;
+
+}
+
+.icons {
+    display: flex;
+    gap: 32px
+}
+
+.github {
+    background-image: url('./assets/Frame\ 30.svg');
+    width: 30px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.gt {
+    background-image: url('./assets/Frame\ 31.svg');
+    width: 30px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.youtube {
+    background-image: url('./assets/Frame\ 33.svg');
+    width: 30px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footerBottom p {
+    color: #757575;
+    font: 600 14px Montserrat;
+    margin-bottom: 40px;
+}
+
+.footerBottom p span {
+    text-decoration: underline 1px #757575;
 }

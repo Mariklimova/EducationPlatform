@@ -20,7 +20,7 @@ function Home() {
                     <button>About platform</button>
                     <div className={style.lightning}>
                         <div className={style.light_img}></div>
-                        <p>600+</p>
+                        <p>600<span>+</span></p>
                     </div>
                     <p>Students</p>
 
@@ -42,6 +42,59 @@ function Home() {
                 </div>
             </div>
         </div>
+
+        <div className={style.section_3}>
+            <div className={style.content_3}>
+                <div className={style.info_3}>
+                    <h1>Increase your knowledge</h1>
+                    <p>Traditional and new effective approaches to learning languages</p>
+                    <button>Textbook →</button>
+                </div>
+                <div className={style.learner_img_3}></div>
+            </div>
+        </div>
+
+        <div className={style.section_4}>
+            <div className={style.content_4}>
+                <div className={style.learner_img_4}></div>
+                <div className={style.info_4}>
+                    <h1>Watch your progress every day</h1>
+                    <p>Save statistics on your achievements and mistakes</p>
+                    <button>Statistics →</button>
+
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div className={style.footerColor}>
+                <div className={style.footerTop}>
+                    <div>
+                        <p>Home</p>
+                        <p>Textbook</p>
+                        <p>Statistics</p>
+                        <p>Sprint</p>
+                    </div>
+                    <div>
+                        <p>Alex</p>
+                        <p>Gabriel</p>
+                        <p>Marcus</p>
+                    </div>
+                </div>
+                <div className={style.line}></div>
+
+                <div className={style.footerBottom}>
+                    <div className={style.icons}>
+                        <div className={style.github}></div>
+                        <div className={style.gt}></div>
+                        <div className={style.youtube}></div>
+
+                    </div>
+                    <p>©2021 Hschool. Project for <span>Hschool.</span></p>
+
+                </div>
+            </div>
+        </footer>
     </div>
 }
 
