@@ -1,0 +1,70 @@
+.footerColor {
+    background-color: #F6F5F4;
+
+}
+
+.footerTop,
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1220px;
+    margin: auto;
+}
+
+.footerTop div {
+    display: flex;
+    gap: 30px;
+}
+
+.footerTop p {
+    color: #757575;
+    font: 600 14px Montserrat;
+    margin-top: 40px;
+}
+
+.line {
+    height: 1.2px;
+    background-color: #E0E0E0;
+    margin: 20px 0px;
+
+}
+
+.icons {
+    display: flex;
+    gap: 32px
+}
+
+.github {
+    background-image: url('./assets/Frame\ 30.svg');
+    width: 30px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.gt {
+    background-image: url('./assets/Frame\ 31.svg');
+    width: 30px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.youtube {
+    background-image: url('./assets/Frame\ 33.svg');
+    width: 30px;
+    height: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.footerBottom p {
+    color: #757575;
+    font: 600 14px Montserrat;
+    margin-bottom: 40px;
+}
+
+.footerBottom p span {
+    text-decoration: underline 1px #757575;
+}

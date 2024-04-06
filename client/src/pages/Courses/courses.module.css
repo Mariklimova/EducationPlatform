@@ -1,0 +1,100 @@
+.backgraund {
+    background-color: #F6F5F4;
+    padding-top: 40px;
+    padding-bottom: 184px;
+   
+}
+
+.wrapper {
+    width: 1180px;
+    height: 72px;
+    padding: 20px 0px 0px;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.header_courses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_courses h1 {
+    font: 800 26px Montserrat;
+    letter-spacing: -0.04em;
+    color: #000000;
+
+}
+
+.img_hat {
+    background-image: url(./assets/Vector\ \(1\).svg);
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.section_1,
+.section_2,
+.section_3 {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 926px;
+    height: 216px;
+    border-radius: 14px;
+    background: #FFFFFF;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.img_students_1,
+.img_students_2,
+.img_students_3 {
+    width: 337px;
+    height: 216px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 14px 0px 0px 14px;
+}
+
+.img_students_1 {
+    background-image: url('./assets/Frame\ 35270.svg');
+}
+
+.img_students_2 {
+    background-image: url('./assets/Frame\ 35270\ \(1\).svg');
+}
+
+.img_students_3 {
+    background-image: url('./assets/Frame\ 35270.svg');
+}
+
+.info{
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.info h1{
+    font: 800 32px Montserrat;
+    letter-spacing: -0.04em;
+    color: #000000;
+
+}
+.info .line{
+    height: 1px;
+    width: 530px;
+    background:#E0E0E0;
+    margin: 20px 15px 12px 0;
+}
+.info p{
+    font: 500 16px Montserrat;
+    color:#757575;
+}

@@ -1,41 +1,10 @@
-.section_1,
 .section_3,
-.footerColor {
+.section_1 {
     background-color: #F6F5F4;
 
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.header p {
-    color: #000000;
-    font: 700 16px Montserrat;
-}
-
-
-.login {
-    font: 700 16px Montserrat;
-    color: #000000;
-    height: 43px;
-    background-color: #F6F5F4;
-    border-width: 0;
-    margin-right: 25px;
-}
-
-.singUp {
-    width: 110px;
-    height: 43px;
-    padding: 13px 21px;
-    border-radius: 14.19px;
-    color: #FFFFFF;
-    background-color: #2B788B;
-    border-width: 0;
-    font: 700 16px Montserrat;
-}
 
 .main {
     display: flex;
@@ -43,7 +12,8 @@
     align-items: center;
     width: 1180px;
     height: 700px;
-    margin-top: 130px;
+    max-width: 1220px;
+    margin: 130px auto 0px;
 }
 
 .info {
@@ -124,7 +94,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 78px;
+    max-width: 1220px;
+    margin: 78px auto 0px;
 }
 
 .learner_img {
@@ -185,7 +156,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 26px;
+    max-width: 1220px;
+    margin: 26px auto 0px;
 }
 
 .info_3 {
@@ -235,8 +207,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 95px;
-    margin-bottom: 95px;
+    max-width: 1220px;
+    margin: 95px auto;
 }
 
 .info_4 {
@@ -280,68 +252,4 @@
     height: 409px;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-.footerTop,
-.footerBottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footerTop div {
-    display: flex;
-    gap: 30px;
-}
-
-.footerTop p {
-    color: #757575;
-    font: 600 14px Montserrat;
-    margin-top: 40px;
-}
-
-.line {
-    height: 1.2px;
-    background-color: #E0E0E0;
-    margin: 20px 0px;
-
-}
-
-.icons {
-    display: flex;
-    gap: 32px
-}
-
-.github {
-    background-image: url('./assets/Frame\ 30.svg');
-    width: 30px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.gt {
-    background-image: url('./assets/Frame\ 31.svg');
-    width: 30px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.youtube {
-    background-image: url('./assets/Frame\ 33.svg');
-    width: 30px;
-    height: 24px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.footerBottom p {
-    color: #757575;
-    font: 600 14px Montserrat;
-    margin-bottom: 40px;
-}
-
-.footerBottom p span {
-    text-decoration: underline 1px #757575;
 }
