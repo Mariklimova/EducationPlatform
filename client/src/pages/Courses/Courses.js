@@ -3,6 +3,19 @@ import Header from "../../components/Header/Header";
 import style from './courses.module.css'
 
 function Courses() {
+
+    const section = [{ course: 'JavaScript', 
+    discription: 'JavaScript is a practical course where students learn the basics of JavaScript. It covers variables, operators, conditionals, loops, functions, and data manipulation.',
+     image: style.img_students_1 },
+
+    { course: 'TypeScript', 
+    discription: 'TypeScript is a course that provides an introduction to TypeScript. Students will learn about TypeScript\'s key features, such as type annotations, interfaces, classes, and modules',
+    image: style.img_students_2 },
+
+    { course: 'Python',
+    discription: 'Students will learn about variables, data types, conditionals, loops, functions, and file handling. Through hands-on exercises and projects, students will gain proficiency in writing Python code and solving real-world problems.',
+    image: style.img_students_3 }]
+
     return <div>
         <Header />
         <div className={style.backgraund}>
@@ -12,30 +25,17 @@ function Courses() {
                     <h1>Courses</h1>
                 </div>
             </div>
-            <div className={style.section_1}>
-                <div className={style.img_students_1}></div>
+          
+            {section.map((el, index) => <div key={index} className={style.section}>
+                <div className={el.image}></div>
                 <div className={style.info}>
-                    <h1>JavaScript</h1>
+                    <h1>{el.course}</h1>
                     <div className={style.line}></div>
-                    <p>JavaScript is a practical course where students learn the basics of JavaScript. It covers variables, operators, conditionals, loops, functions, and data manipulation.</p>
+                    <p>{el.discription}</p>
                 </div>
-            </div>
-            <div className={style.section_2}>
-                <div className={style.img_students_2}></div>
-                <div className={style.info}>
-                    <h1>TypeScript</h1>
-                    <div className={style.line}></div>
-                    <p>TypeScript is a course that provides an introduction to TypeScript. Students will learn about TypeScript's key features, such as type annotations, interfaces, classes, and modules</p>
-                </div>
-            </div>
-            <div className={style.section_3}>
-                <div className={style.img_students_3}></div>
-                <div className={style.info}>
-                    <h1>Python</h1>
-                    <div className={style.line}></div>
-                    <p>Students will learn about variables, data types, conditionals, loops, functions, and file handling. Through hands-on exercises and projects, students will gain proficiency in writing Python code and solving real-world problems.</p>
-                </div>
-            </div>
+            </div>)}
+
+           
         </div>
 
         <Footer />

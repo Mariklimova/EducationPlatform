@@ -37,9 +37,7 @@
     margin-right: 10px;
 }
 
-.section_1,
-.section_2,
-.section_3 {
+.section {
     display: flex;
     justify-content:space-between;
     align-items: center;
