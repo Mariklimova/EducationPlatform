@@ -1,19 +1,38 @@
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import style from './signup.module.css';
+import axios from 'axios';
 
 function SignUp() {
+
+    const name = useRef();
+    const surname = useRef();
+    const email = useRef();
+    const pwd = useRef();
+
+    const navigate = useNavigate();
+    
+    async function getInp() {
+        const data = {name: name.current.value,surname: surname.current.value, email: email.current.value, pwd: pwd.current.value }
+        const response = await axios.post('http://localhost:3005/api/reg', data)
+        console.log(response.data);
+        navigate('/signin')
+    }
+
     return <div>
         <Header />
         <div className={style.background}>
             <div className={style.content}>
                 <div className={style.info}>
                     <h1>Sign Up</h1>
-                    <input type="text" placeholder="name" />
-                    <input type="text" placeholder="surname" />
-                    <input type="text" placeholder="email" />
-                    <input type="text" placeholder="password" />
-                    <button>Sign Up</button>
+                    <input ref = {name} type="text" placeholder="name" />
+                    <input ref = {surname} type="text" placeholder="surname" />
+                    <input ref = {email} type="text" placeholder="email" />
+                    <input ref = {pwd} type="text" placeholder="password" />
+                    
+                    <button onClick={getInp}>Sign Up</button>
                 </div>
                 <div className={style.image}></div>
             </div>

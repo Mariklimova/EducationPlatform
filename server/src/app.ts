@@ -1,5 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
+import cookieParser from 'cookie-parser'
 import bodyParser from 'body-parser';
 import routeUser from './controller/user.controller';
 import routeCourse from './controller/course.controller';
@@ -14,6 +15,8 @@ app.use(
     credentials: true,
   }),
 );
+
+app.use(cookieParser())
 app.use(bodyParser.json());
 app.use('/user', routeUser);
 app.use('/course', routeCourse);
