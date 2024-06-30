@@ -1,0 +1,54 @@
+.background {
+    background-color: #F6F5F4;
+    padding-top: 113px;
+    /* padding-bottom: 112px; */
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
+    gap: 30px;
+}
+
+.info h1{
+    font: 800 56px Montserrat;
+    color: #000000;
+}
+.info h5{
+    font: 700 16px Montserrat;
+    color: #757575;
+}
+
+.info p{
+    font: 500 20px Montserrat;
+    color: #757575;
+}
+
+.info button {
+    width: 118px;
+    height: 44px;
+    padding: 14px 22px;
+    border-radius: 100px;
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;
+    border-width: 0;
+    color: #FFFFFF;
+    background: #2B788B;
+
+}
+
+.content .image {
+    background-image: url('./assets/Image.svg');
+    width: 395px;
+    height: 445px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

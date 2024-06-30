@@ -5,6 +5,7 @@ import Courses from './pages/Courses/Courses'
 import SignUp from './pages/SignUp/SignUp';
 import SignIn from './pages/SignIn/SignIn';
 import SingleCourse from './pages/SingleCourse/SingleCourse';
+import ErrorPage from './pages/ErrorPage/ErrorPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path = '/course' element={<Courses/>}/>
         <Route path = '/signup' element={<SignUp/>}/>
         <Route path = '/signin' element={<SignIn/>}/>
+        <Route path = '/error' element={<ErrorPage/>}/>
         <Route path = '/singleCourse' element={<SingleCourse/>}/>
       </Routes>
     </div>

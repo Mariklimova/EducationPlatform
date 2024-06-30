@@ -6,7 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 function Header() {
     const [token, setToken] = useState('');
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    
     function getToken() {
         const aplicationToken = JsCookie.get('accessToken');
         setToken(aplicationToken)
