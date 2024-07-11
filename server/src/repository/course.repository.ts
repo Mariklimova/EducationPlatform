@@ -22,6 +22,7 @@ async function getAllCourseDB(): Promise<iCourse[]> {
 
   const sql: string = 'select * from courses order by id asc';
   const { rows } = await client.query(sql);
+  client.release();
   return rows;
 }
 
@@ -30,6 +31,7 @@ async function getCourseByIdDB(id: string): Promise<iCourse[]> {
 
   const sql: string = 'select * from courses where id = $1';
   const { rows } = await client.query(sql, [id]);
+  client.release();
   return rows;
 }
 

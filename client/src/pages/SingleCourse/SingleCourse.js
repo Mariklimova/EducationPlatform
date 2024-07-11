@@ -1,10 +1,23 @@
+import { useEffect, useState } from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import style from './singleCourse.module.css';
-
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 
 
 function SingleCourse() {
+    const objectWithId = useParams()
+
+    const [data, setData] = useState([])
+    const getCourseById = async () => {
+        const response = await axios.get(`http://localhost:3005/course/${objectWithId.id}`);
+        setData(response.data)
+    }
+    useEffect(() => {
+        getCourseById();
+    }, [])
+
     return <div>
         <Header />
         <div className={style.background}>
@@ -13,12 +26,12 @@ function SingleCourse() {
                     <div className={style.discription}>
                         <div className={style.image_books}></div>
                         <div className={style.info}>
-                            <h1>JavaScript</h1>
-                            <p>JavaScript is a practical course where students learn the basics of JavaScript. It covers variables, operators, conditionals, loops, functions, and data manipulation.</p>
+                            <h1>{data[0]?.course}</h1>
+                            <p>{data[0]?.description}</p>
 
                         </div>
                     </div>
-                    <button>Go to course</button>
+                    <button><Link to ={'/course'}>Go to course</Link></button>
 
                 </div>
                 <div className={style.tests}>
