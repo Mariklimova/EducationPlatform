@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import routeUser from './controller/user.controller';
 import routeCourse from './controller/course.controller';
 import routeApi from './controller/api.controller';
+import routeLesson from './controller/lesson.controller';
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use('/user', routeUser);
 app.use('/course', routeCourse);
 app.use('/api', routeApi);
+app.use('/lessons', routeLesson);
 
 app.use((er: any, _req: Request, res: Response, next: NextFunction):void => {
   res.send(er.message);
