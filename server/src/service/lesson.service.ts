@@ -1,40 +1,40 @@
 // import { iCourse } from '../interfaces/interface';
-import { createLessonDB, getAllCourseDB, updateCourseDB, getCourseByIdDB, deleteCourseDB, partUpdateCourseDB } from '../repository/course.repository';
+import { createLessonDB, getAllLessonsDB, updateLessonDB, getLessonByCourseDB, deleteLessonDB, partUpdateLessonDB } from '../repository/course.repository';
 
-async function createCourse(course: string, description: string): Promise<iCourse[]> {
-  const data: iCourse[] = await createCourseDB(course, description);
+async function createLesson(title: string, course_id: number) {
+  const data = await createLessonDB(title, course_id);
   if (!data.length) throw new Error('data do not create');
   return data;
 }
 
-async function getAllCourse(): Promise<iCourse[]> {
-  const data: iCourse[] = await getAllCourseDB();
+async function getAllLessons(){
+  const data = await getAllLessonsDB();
   if (!data.length) throw new Error('The database is empty');
   return data;
 }
 
-async function getCourseById(id: string): Promise<iCourse[]> {
-  const data: iCourse[] = await getCourseByIdDB(id);
+async function getLessonByCourse(course_id: number) {
+  const data = await getLessonByCourseDB(course_id);
   if (!data.length) throw new Error('Id is not found');
   return data;
 }
 
-async function updateCourse(id: string, course: string, description: string): Promise<iCourse[]> {
-  const data: iCourse[] = await updateCourseDB(id, course, description);
+async function updateLesson(title: string, course_id: number) {
+  const data = await updateLessonDB(title, course_id);
   if (!data.length) throw new Error('Data is not saved');
   return data;
 }
 
-async function deleteCourse(id: string): Promise<iCourse[]> {
-  const data: iCourse[] = await deleteCourseDB(id);
+async function deleteLesson(id: number) {
+  const data = await deleteLessonDB(id);
   if (!data.length) throw new Error('Id is not found, data was not deleted');
   return data;
 }
 
-async function partUpdateCourse(id: string, body: iCourse): Promise<iCourse[]> {
-  const data: iCourse[] = await partUpdateCourseDB(id, body);
+async function partUpdateLesson(id:number, body) {
+  const data = await partUpdateLessonDB(id, body);
   if (!data.length) throw new Error('Data is not changed');
   return data;
 }
 
-export { createCourse, getAllCourse, updateCourse, getCourseById, deleteCourse, partUpdateCourse };
+export { createLesson, getAllLessons, updateLesson, getLessonByCourse, deleteLesson, partUpdateLesson };
