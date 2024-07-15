@@ -9,10 +9,15 @@ import axios from "axios";
 function SingleCourse() {
     const objectWithId = useParams()
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
+    const [lesson,setLesson] = useState([]);
+
     const getCourseById = async () => {
         const response = await axios.get(`http://localhost:3005/course/${objectWithId.id}`);
-        setData(response.data)
+        setData(response.data);
+
+        const responseLessons = await axios.get(`http://localhost:3005/lesson/${objectWithId.id}`);
+        setLesson(responseLessons.data)
     }
     useEffect(() => {
         getCourseById();
@@ -36,11 +41,8 @@ function SingleCourse() {
                 </div>
                 <div className={style.tests}>
                     <h1>15 lessons</h1>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
-                    <p>1. Test</p>
+                    {lesson.map((el,i)=><p key = {i}>{i+1}.{el.title}</p>)}
+                    
                 </div>
             </div>
         </div>

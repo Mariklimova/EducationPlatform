@@ -1,7 +1,7 @@
 import pool from '../db';
-// import { iCourse } from '../interfaces/interface';
+import { iLesson } from '../interfaces/interface';
 
-async function createLessonDB(title: string, course_id:number) {
+async function createLessonDB(title: string, course_id:number): Promise<iLesson[]>  {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -17,7 +17,7 @@ async function createLessonDB(title: string, course_id:number) {
   }
 }
 
-async function getAllLessonsDB() {
+async function getAllLessonsDB(): Promise<iLesson[]>  {
   const client = await pool.connect();
 
   const sql: string = 'select * from lessons order by id asc';
@@ -26,7 +26,7 @@ async function getAllLessonsDB() {
   return rows;
 }
 
-async function getLessonByCourseDB(course_id: number) {
+async function getLessonByCourseDB(course_id: string): Promise<iLesson[]>  {
   const client = await pool.connect();
 
   const sql: string = 'select * from lessons where course_id = $1 order by id asc';
@@ -35,7 +35,7 @@ async function getLessonByCourseDB(course_id: number) {
   return rows;
 }
 
-async function deleteLessonDB(id: string) {
+async function deleteLessonDB(id: string): Promise<iLesson[]>  {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -51,7 +51,7 @@ async function deleteLessonDB(id: string) {
   }
 }
 
-async function updateLessonDB(id: number, title: string, course_id: number){
+async function updateLessonDB(id: string, title: string, course_id: number): Promise<iLesson[]> {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -67,7 +67,7 @@ async function updateLessonDB(id: number, title: string, course_id: number){
   }
 }
 
-async function partUpdateLessonDB(id: number, body) {
+async function partUpdateLessonDB(id: string, body:iLesson): Promise<iLesson[]>  {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
