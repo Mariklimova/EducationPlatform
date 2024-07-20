@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import style from './error.module.css';
@@ -16,7 +17,7 @@ function ErrorPage() {
                     <h1>Hey Buddy</h1>
                     <p>We can’t seem to find the page you are looking for.</p>
                     
-                    <button>Go home</button>
+                    <button><Link to ={'/'}>Go home</Link></button>
                 </div>
                 <div className={style.image}></div>
             </div>

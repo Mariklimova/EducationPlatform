@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use('/user', routeUser);
 app.use('/course', routeCourse);
 app.use('/api', routeApi);
-app.use('/lessons', routeLesson);
+app.use('/lesson', routeLesson);
 
 app.use((er: any, _req: Request, res: Response, next: NextFunction):void => {
   res.send(er.message);

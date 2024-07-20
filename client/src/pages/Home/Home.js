@@ -1,6 +1,7 @@
 import style from './home.module.css'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import { Link } from 'react-router-dom'
 
 function Home() {
     return <div>
@@ -12,7 +13,7 @@ function Home() {
                     <h5>E-COURSE PLATFORM</h5>
                     <h1>Learning and teaching online, made easy.</h1>
                     <p>Any subject, in any language, on any device, for all ages!</p>
-                    <button>About platform</button>
+                    <button><Link to ={'/error'}>About platform</Link></button>
                     <div className={style.lightning}>
                         <div className={style.light_img}></div>
                         <p>600<span>+</span></p>
@@ -43,7 +44,7 @@ function Home() {
                 <div className={style.info_3}>
                     <h1>Increase your knowledge</h1>
                     <p>Traditional and new effective approaches to learning languages</p>
-                    <button>Textbook →</button>
+                    <button><Link to ={'/error'}>Textbook →</Link></button>
                 </div>
                 <div className={style.learner_img_3}></div>
             </div>
@@ -55,7 +56,7 @@ function Home() {
                 <div className={style.info_4}>
                     <h1>Watch your progress every day</h1>
                     <p>Save statistics on your achievements and mistakes</p>
-                    <button>Statistics →</button>
+                    <button><Link to ={'/error'}>Statistics →</Link></button>
 
                 </div>
             </div>

@@ -37,14 +37,18 @@
     height: 44px;
     padding: 14px 22px;
     border-radius: 100px;
-    font: 700 16px Montserrat;
-    letter-spacing: -0.04em;
+    /* font: 700 16px Montserrat; */
+    /* letter-spacing: -0.04em; */
     border-width: 0;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     background: #2B788B;
 
 }
-
+.info a{
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;
+    color: #FFFFFF; 
+}
 .content .image {
     background-image: url('./assets/Image.svg');
     width: 395px;

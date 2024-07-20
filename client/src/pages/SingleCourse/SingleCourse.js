@@ -41,7 +41,7 @@ function SingleCourse() {
                 </div>
                 <div className={style.tests}>
                     <h1>15 lessons</h1>
-                    {lesson.map((el,i)=><p key = {i}>{i+1}.{el.title}</p>)}
+                    {lesson.map((el,i)=><p key = {i}>{i+1}. {el.title}</p>)}
                     
                 </div>
             </div>

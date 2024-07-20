@@ -45,13 +45,18 @@
     padding: 14px 20px;
     border-radius: 100px;
     background: #C3DCE3;
-    color: #2B788B;
+    /* color: #2B788B;
     font: 700 16px Montserrat;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.04em; */
     margin-bottom: 49px;
     margin-top: 32px;
     border-width: 0;
 }
+/* .info a{
+    color: #2B788B;
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;   
+} */
 
 .lightning {
     display: flex;
@@ -250,4 +255,10 @@
     height: 409px;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.info a, .info_3 a, .info_4 a{
+    color: #2B788B;
+    font: 700 16px Montserrat;
+    letter-spacing: -0.04em;   
 }
